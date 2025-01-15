@@ -4,6 +4,13 @@
   "newProjectRoot": "projects",
   "projects": {
     "localize-demo": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "fa": "src/locale/messages.fa.json",
+          "ja": "src/locale/messages.ja.json"
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,11 +20,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "localize": true,
             "outputPath": "dist/localize-demo",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -48,9 +57,16 @@
               "outputHashing": "all"
             },
             "development": {
+              "localize": false,
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "fa": {
+              "localize": ["fa"]
+            },
+            "ja": {
+              "localize": ["ja"]
             }
           },
           "defaultConfiguration": "production"
@@ -63,19 +79,30 @@
             },
             "development": {
               "buildTarget": "localize-demo:build:development"
+            },
+            "fa": {
+              "buildTarget": "localize-demo:build:fa"
+            },
+            "ja": {
+              "buildTarget": "localize-demo:build:ja"
             }
           },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n"
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "localize-demo:build",
+            "outputPath": "src/locale" 
+          }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [

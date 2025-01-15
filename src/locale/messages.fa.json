@@ -1,0 +1,41 @@
+{
+  "locale": "fa",
+  "translations": {
+    "main-title": "به نسخه نمایشی بومی سازی خوش آمدید",
+    
+    "section-date-title": "بومی‌سازی تاریخ",
+    "section-date-today": "تاریخ امروز:",
+    
+    "section-currency-title": "بومی‌سازی ارز",
+    "section-currency-amount": "مقدار:",
+    "section-currency-code": "کد ارز: {$INTERPOLATION}",
+    
+    "section-number-title": "قالب‌بندی عدد",
+    "section-large-number": "عدد بزرگ:",
+    
+    "section-plural-title": "جمع‌بندی",
+    "section-cart-label": "تعداد آیتم‌ها در سبد خرید را وارد کنید:",
+    "section-cart-message": " {$ICU} ",
+    
+    "5626341735168627022": "{VAR_PLURAL, plural, =0 {سبد خرید شما خالی است.} =1 {شما ۱ آیتم در سبد خرید دارید.} other {شما {INTERPOLATION} آیتم در سبد خرید دارید.}}",
+    "section-gender-title": "بومی‌سازی بر اساس جنسیت",
+    "section-gender-label": "انتخاب جنسیت:",
+    "section-gender-male": "مرد",
+    "section-gender-female": "زن",
+    "section-gender-other": "دیگر",
+    "section-gender-message": " {$ICU} ",
+    "4606383290184133341": "{VAR_SELECT, select, male {سلام آقای {INTERPOLATION}!} female {سلام خانم {INTERPOLATION}!} other {سلام {INTERPOLATION}!}}",
+
+    "section-list-title": "لیست محصولات",
+    "section-list-description": "برخی از محصولات موجود عبارتند از:",
+    "section-list-price": "قیمت:",
+
+    "section-programmatic-title": "بومی‌سازی برنامه‌ریزی‌شده با $localize",
+    "morning-greeting": "صبح بخیر!",
+    "afternoon-greeting": "عصر بخیر!",
+    "evening-greeting": "شب بخیر!",
+
+    "section-locale-switching-title": "تغییر زبان",
+    "section-locale-switching-label": "انتخاب زبان:"
+  }
+}

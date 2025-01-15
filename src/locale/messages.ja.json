@@ -1,0 +1,8 @@
+{
+  "locale": "ja",
+  "translations": {
+    "main-title": "ローカリゼーションデモへようこそ",
+    "section-date-title": "日付のローカリゼーション",
+    "section-date-today": "今日の日付:"
+  }
+}
