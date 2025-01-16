@@ -1,6 +1,7 @@
 {
   "locale": "ja-JP",
   "translations": {
+    "main-title": "ローカリゼーションデモへようこそ 🇯🇵{$START_TAG_SPAN}{$CLOSE_TAG_SPAN}",
     "3962833036900639052": "ローカリゼーションデモへようこそ",
     "section-date-title": "日付のローカリゼーション",
     "section-date-today": "今日の日付:",

@@ -1,7 +1,7 @@
 {
   "locale": "en-US",
   "translations": {
-    "3962833036900639052": "Welcome to the Localization Demo",
+    "main-title": "Welcome to the Localization Demo 🇺🇸{$START_TAG_SPAN}{$CLOSE_TAG_SPAN}",
     "section-date-title": "Date Localization",
     "section-date-today": "Today's date:",
     "section-currency-title": "Currency Localization",
