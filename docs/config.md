@@ -47,7 +47,7 @@ ng add @angular/localize
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js",
-              "@angular/localize/init"  // Initializes Angular localization
+              "@angular/localize/init"  // Initializes Angular localization (added automatically)
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -98,10 +98,10 @@ ng add @angular/localize
             "production": {
               "buildTarget": "angular-localization:build:production"
             },
-            "fa": {
+            "fa": { // serve configuration for fa
               "buildTarget": "angular-localization:build:fa"
             },
-            "ja": {
+            "ja": { // serve configuration for ja
               "buildTarget": "angular-localization:build:ja"
             }
             "development": {
