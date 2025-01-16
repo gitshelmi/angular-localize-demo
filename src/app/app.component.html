@@ -1,98 +1,122 @@
-<h1 i18n="@@main-title" class="main-title">Welcome to the Localization Demo</h1>
+<h1 i18n="main-title" class="main-title">Welcome to the Localization Demo</h1>
 
-<!-- Date Localization Section -->
-<div class="section">
-  <h2 i18n="@@section-date-title">Date Localization</h2>
-  <p i18n="@@section-date-today">Today's date:</p>
-  <p>{{ today | date: 'longDate' }}</p>
-</div>
+<mat-accordion>
 
-<hr class="divider" />
+  <!-- Date Localization Section -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Date Localization</mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="section">
+      <h2 i18n="@@section-date-title">Date Localization</h2>
+      <p i18n="@@section-date-today">Today's date:</p>
+      <p>{{ today | date: 'longDate' }}</p>
+    </div>
+  </mat-expansion-panel>
 
-<!-- Currency Localization Section -->
-<div class="section">
-  <h2 i18n="@@section-currency-title">Currency Localization</h2>
-  <p i18n="@@section-currency-amount">Amount:</p>
-  <p>{{ amount | currency: currentCurrency }}</p>
-  <p i18n="@@section-currency-code">Currency Code: {{ currentCurrency }}</p>
-</div>
+  <!-- Currency Localization Section -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Currency Localization</mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="section">
+      <h2 i18n="@@section-currency-title">Currency Localization</h2>
+      <p i18n="@@section-currency-amount">Amount:</p>
+      <p>{{ amount | currency: currentCurrency }}</p>
+      <p i18n="@@section-currency-code">Currency Code: {{ currentCurrency }}</p>
+    </div>
+  </mat-expansion-panel>
 
-<hr class="divider" />
+  <!-- Number Formatting Section -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Number Formatting</mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="section">
+      <h2 i18n="@@section-number-title">Number Formatting</h2>
+      <p i18n="@@section-large-number">Large Number:</p>
+      <p>{{ largeNumber | number }}</p>
+    </div>
+  </mat-expansion-panel>
 
-<!-- Number Formatting Section -->
-<div class="section">
-  <h2 i18n="@@section-number-title">Number Formatting</h2>
-  <p i18n="@@section-large-number">Large Number:</p>
-  <p>{{ largeNumber | number }}</p>
-</div>
+  <!-- Pluralization Section -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Pluralization</mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="section">
+      <h2 i18n="@@section-plural-title">Pluralization</h2>
+      <label for="cart-count-input" i18n="@@section-cart-label">Enter number of items in cart:</label>
+      <input
+        id="cart-count-input"
+        type="number"
+        [(ngModel)]="itemCount"
+        min="0"
+        class="cart-input"
+      />
+      <p>
+        <ng-container i18n="@@section-cart-message">
+          { itemCount, plural,
+            =0 {Your cart is empty.}
+            =1 {You have 1 item in your cart.}
+            other {You have {{itemCount}} items in your cart.}
+          }
+        </ng-container>
+      </p>
+    </div>
+  </mat-expansion-panel>
 
-<hr class="divider" />
+  <!-- Gender-Based Text Variations Section -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Gender-Based Text Variations</mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="section">
+      <h2 i18n="@@section-gender-title">Gender-Based Text Variations</h2>
+      <label for="gender-select" i18n="@@section-gender-label">Select Gender:</label>
+      <select id="gender-select" [(ngModel)]="userGender">
+        <option value="male" i18n="@@section-gender-male">Male</option>
+        <option value="female" i18n="@@section-gender-female">Female</option>
+        <option value="other" i18n="@@section-gender-other">Other</option>
+      </select>
+      <p>
+        <ng-container i18n="@@section-gender-message">
+          { userGender, select,
+            male {Hello, Mr. {{ userName }}!}
+            female {Hello, Ms. {{ userName }}!}
+            other {Hello, {{ userName }}!}
+          }
+        </ng-container>
+      </p>
+    </div>
+  </mat-expansion-panel>
 
-<!-- Pluralization Section -->
-<div class="section">
-  <h2 i18n="@@section-plural-title">Pluralization</h2>
-  <label for="cart-count-input" i18n="@@section-cart-label">Enter number of items in cart:</label>
-  <input
-    id="cart-count-input"
-    type="number"
-    [(ngModel)]="itemCount"
-    min="0"
-    class="cart-input"
-  />
-  <p>
-    <ng-container i18n="@@section-cart-message">
-      { itemCount, plural,
-        =0 {Your cart is empty.}
-        =1 {You have 1 item in your cart.}
-        other {You have {{itemCount}} items in your cart.}
-      }
-    </ng-container>
-  </p>
-</div>
+  <!-- Dynamic List Section -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Product List</mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="section">
+      <h2 i18n="@@section-list-title">Product List</h2>
+      <p i18n="@@section-list-description">Here are some products available:</p>
+      <ul>
+        <li *ngFor="let product of products">
+          <span>{{ product.name }}</span> -
+          <span i18n="@@section-list-price">Price:</span> {{ product.price | currency: currentCurrency }}
+        </li>
+      </ul>
+    </div>
+  </mat-expansion-panel>
 
-<!-- Gender-Based Text Variations Section -->
-<div class="section">
-  <h2 i18n="@@section-gender-title">Gender-Based Text Variations</h2>
+  <!-- Programmatic Localization Section -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Programmatic Localization</mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="section">
+      <h2 i18n="@@section-programmatic-title">Programmatic Localization using $localize</h2>
+      <p>{{ greeting }}</p>
+    </div>
+  </mat-expansion-panel>
 
-  <!-- Dropdown to select gender -->
-  <label for="gender-select" i18n="@@section-gender-label">Select Gender:</label>
-  <select id="gender-select" [(ngModel)]="userGender">
-    <option value="male" i18n="@@section-gender-male">Male</option>
-    <option value="female" i18n="@@section-gender-female">Female</option>
-    <option value="other" i18n="@@section-gender-other">Other</option>
-  </select>
-
-  <!-- Dynamic message based on selected gender -->
-  <p>
-    <ng-container i18n="@@section-gender-message">
-      { userGender, select,
-        male {Hello, Mr. {{ userName }}!}
-        female {Hello, Ms. {{ userName }}!}
-        other {Hello, {{ userName }}!}
-      }
-    </ng-container>
-  </p>
-</div>
-
-<hr class="divider" />
-
-<!-- Dynamic List Section -->
-<div class="section">
-  <h2 i18n="@@section-list-title">Product List</h2>
-  <p i18n="@@section-list-description">Here are some products available:</p>
-  
-  <ul>
-    <li *ngFor="let product of products">
-      <span>{{ product.name }}</span> -
-      <span i18n="@@section-list-price">Price:</span> {{ product.price | currency: currentCurrency }}
-    </li>
-  </ul>
-</div>
-
-<hr class="divider" />
-
-<!-- Programmatic Localization Section -->
-<div class="section">
-  <h2 i18n="@@section-programmatic-title">Programmatic Localization using $localize</h2>
-  <p>{{ greeting }}</p>
-</div>
+</mat-accordion>

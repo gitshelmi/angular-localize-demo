@@ -1,8 +1,31 @@
 {
-  "locale": "ja",
+  "locale": "ja-JP",
   "translations": {
-    "main-title": "ローカリゼーションデモへようこそ",
+    "3962833036900639052": "ローカリゼーションデモへようこそ",
     "section-date-title": "日付のローカリゼーション",
-    "section-date-today": "今日の日付:"
+    "section-date-today": "今日の日付:",
+    "section-currency-title": "通貨のローカリゼーション",
+    "section-currency-amount": "金額:",
+    "section-currency-code": "通貨コード: {$INTERPOLATION}",
+    "section-number-title": "数字のフォーマット",
+    "section-large-number": "大きな数値:",
+    "section-plural-title": "複数形の表現",
+    "section-cart-label": "カート内のアイテム数を入力してください:",
+    "section-cart-message": " {$ICU} ",
+    "5626341735168627022": "{VAR_PLURAL, plural, =0 {カートは空です。} =1 {カートに1つのアイテムがあります。} other {カートに{INTERPOLATION}個のアイテムがあります。}}",
+    "section-gender-title": "性別に基づくテキストのバリエーション",
+    "section-gender-label": "性別を選択してください:",
+    "section-gender-male": "男性",
+    "section-gender-female": "女性",
+    "section-gender-other": "その他",
+    "section-gender-message": " {$ICU} ",
+    "4606383290184133341": "{VAR_SELECT, select, male {こんにちは、{INTERPOLATION}さん！} female {こんにちは、{INTERPOLATION}さん！} other {こんにちは、{INTERPOLATION}さん！}}",
+    "section-list-title": "商品リスト",
+    "section-list-description": "利用可能な商品はこちらです:",
+    "section-list-price": "価格:",
+    "section-programmatic-title": "$localize を使用したプログラムによるローカリゼーション",
+    "morning-greeting": "おはようございます！",
+    "afternoon-greeting": "こんにちは！",
+    "evening-greeting": "こんばんは！"
   }
 }

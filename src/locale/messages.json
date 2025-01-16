@@ -1,7 +1,7 @@
 {
   "locale": "en-US",
   "translations": {
-    "main-title": "Welcome to the Localization Demo",
+    "3962833036900639052": "Welcome to the Localization Demo",
     "section-date-title": "Date Localization",
     "section-date-today": "Today's date:",
     "section-currency-title": "Currency Localization",
@@ -19,6 +19,13 @@
     "section-gender-female": "Female",
     "section-gender-other": "Other",
     "section-gender-message": " {$ICU} ",
-    "4606383290184133341": "{VAR_SELECT, select, male {Hello, Mr. {INTERPOLATION}!} female {Hello, Ms. {INTERPOLATION}!} other {Hello, {INTERPOLATION}!}}"
+    "4606383290184133341": "{VAR_SELECT, select, male {Hello, Mr. {INTERPOLATION}!} female {Hello, Ms. {INTERPOLATION}!} other {Hello, {INTERPOLATION}!}}",
+    "section-list-title": "Product List",
+    "section-list-description": "Here are some products available:",
+    "section-list-price": "Price:",
+    "section-programmatic-title": "Programmatic Localization using $localize",
+    "morning-greeting": "Good morning!",
+    "afternoon-greeting": "Good afternoon!",
+    "evening-greeting": "Good evening!"
   }
 }

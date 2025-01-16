@@ -6,9 +6,10 @@ import { AppComponent } from './app/app.component';
 import { registerLocaleData } from '@angular/common';
 
 import localeFa from '@angular/common/locales/fa';
-
+import localeJa from '@angular/common/locales/ja';
 
 registerLocaleData(localeFa);
+registerLocaleData(localeJa);
 
 bootstrapApplication(AppComponent, appConfig)
   .catch((err) => console.error(err));
