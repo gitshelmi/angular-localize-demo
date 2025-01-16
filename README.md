@@ -1,5 +1,5 @@
 
-# Welcme!
+# Welcome!
 
 This project demonstrates Angular's localization features, including serving the application in different locales.
 
