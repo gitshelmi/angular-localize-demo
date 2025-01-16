@@ -3,6 +3,10 @@
   "translations": {
     "main-title": "به نسخه نمایشی بومی سازی خوش آمدید 🇮🇷",
     
+    "section-locale-title": "زبان کنونی",
+    "section-locale-description": "زبان فعلی برنامه:",
+
+
     "section-date-title": "بومی‌سازی تاریخ",
     "section-date-today": "تاریخ امروز:",
     

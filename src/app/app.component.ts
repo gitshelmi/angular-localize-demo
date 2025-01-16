@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, DEFAULT_CURRENCY_CODE, Inject, LOCALE_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -16,9 +16,13 @@ import { MatExpansionModule } from '@angular/material/expansion';
   ],
 })
 export class AppComponent {
-constructor(){
-  this.greeting = this.getLocalizedGreeting();
-}
+  constructor(
+    @Inject(LOCALE_ID) public locale: string,
+    @Inject(DEFAULT_CURRENCY_CODE) public defaultCurrency: string) {
+    this.greeting = this.getLocalizedGreeting();
+    this.currentCurrency = this.defaultCurrency;
+  }
+  
   today: Date = new Date();
 
   // Example amount for currency display

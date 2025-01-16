@@ -2,6 +2,18 @@
 
 <mat-accordion>
 
+  <!-- Current Locale Section -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Current Locale</mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="section">
+      <h2 i18n="@@section-locale-title">Current Locale</h2>
+      <p i18n="@@section-locale-description">The current locale is:</p>
+      <p>{{ locale }}</p>
+    </div>
+  </mat-expansion-panel>
+    
   <!-- Date Localization Section -->
   <mat-expansion-panel>
     <mat-expansion-panel-header>
@@ -22,7 +34,7 @@
     <div class="section">
       <h2 i18n="@@section-currency-title">Currency Localization</h2>
       <p i18n="@@section-currency-amount">Amount:</p>
-      <p>{{ amount | currency: currentCurrency }}</p>
+      <p>{{ amount | currency }}</p>
       <p i18n="@@section-currency-code">Currency Code: {{ currentCurrency }}</p>
     </div>
   </mat-expansion-panel>

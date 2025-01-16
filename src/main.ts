@@ -1,15 +1,24 @@
-/// <reference types="@angular/localize" />
-
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
-import { registerLocaleData } from '@angular/common';
+import { DEFAULT_CURRENCY_CODE, LOCALE_ID } from '@angular/core';
 
-import localeFa from '@angular/common/locales/fa';
-import localeJa from '@angular/common/locales/ja';
-
-registerLocaleData(localeFa);
-registerLocaleData(localeJa);
-
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    {
+      provide: DEFAULT_CURRENCY_CODE,
+      useFactory: (locale: string) => {
+        switch (locale) {
+          case 'fa-IR':
+          case 'fa':
+            return 'IRR'; // Iranian Rial
+          case 'ja-JP':
+          case 'ja':
+            return 'JPY'; // Japanese Yen
+          default:
+            return 'USD'; // Default to US Dollar
+        }
+      },
+      deps: [LOCALE_ID],
+    },
+  ],
+}).catch((err) => console.error(err));

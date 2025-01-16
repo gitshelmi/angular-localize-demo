@@ -2,17 +2,25 @@
   "locale": "en-US",
   "translations": {
     "main-title": "Welcome to the Localization Demo 🇺🇸{$START_TAG_SPAN}{$CLOSE_TAG_SPAN}",
+    
+    "section-locale-title": "Current Locale",
+    "section-locale-description": "The current locale is:",
+    
     "section-date-title": "Date Localization",
     "section-date-today": "Today's date:",
+    
     "section-currency-title": "Currency Localization",
     "section-currency-amount": "Amount:",
     "section-currency-code": "Currency Code: {$INTERPOLATION}",
+    
     "section-number-title": "Number Formatting",
     "section-large-number": "Large Number:",
+    
     "section-plural-title": "Pluralization",
     "section-cart-label": "Enter number of items in cart:",
     "section-cart-message": " {$ICU} ",
     "5626341735168627022": "{VAR_PLURAL, plural, =0 {Your cart is empty.} =1 {You have 1 item in your cart.} other {You have {INTERPOLATION} items in your cart.}}",
+    
     "section-gender-title": "Gender-Based Text Variations",
     "section-gender-label": "Select Gender:",
     "section-gender-male": "Male",
@@ -20,9 +28,11 @@
     "section-gender-other": "Other",
     "section-gender-message": " {$ICU} ",
     "4606383290184133341": "{VAR_SELECT, select, male {Hello, Mr. {INTERPOLATION}!} female {Hello, Ms. {INTERPOLATION}!} other {Hello, {INTERPOLATION}!}}",
+    
     "section-list-title": "Product List",
     "section-list-description": "Here are some products available:",
     "section-list-price": "Price:",
+    
     "section-programmatic-title": "Programmatic Localization using $localize",
     "morning-greeting": "Good morning!",
     "afternoon-greeting": "Good afternoon!",
