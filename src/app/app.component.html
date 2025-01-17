@@ -1,3 +1,14 @@
+<!-- Language Switcher -->
+<div class="language-switcher">
+
+  <select id="locale-select" (change)="onLocaleChange($event)" [value]="locale">
+    <option value="en">English 🇺🇸</option>
+    <option value="fa">Farsi 🇮🇷</option>
+    <option value="ja">Japanese 🇯🇵</option>
+  </select>
+</div>
+
+
 <h1 i18n="@@main-title" class="main-title">Welcome to the Localization Demo 🇺🇸<span></span></h1>
 
 <mat-accordion>

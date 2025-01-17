@@ -41,7 +41,7 @@ ng add @angular/localize
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "localize": true,  // Enables build-time localization
+            "localize": false,  // Enables build-time localization
             "outputPath": "dist/angular-localization",
             "index": "src/index.html",
             "browser": "src/main.ts",

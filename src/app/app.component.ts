@@ -21,8 +21,22 @@ export class AppComponent {
     @Inject(DEFAULT_CURRENCY_CODE) public defaultCurrency: string) {
     this.greeting = this.getLocalizedGreeting();
     this.currentCurrency = this.defaultCurrency;
+    this.locale = localStorage.getItem('locale') || locale || 'en'
   }
-  
+
+  // Function to handle locale change
+  onLocaleChange(event: Event) {
+    const target = event.target as HTMLSelectElement;
+
+    if (target && target.value) {
+      const newLocale = target.value;
+      localStorage.setItem('locale', newLocale); // Save selected locale to localStorage
+      window.location.reload(); // Reload the app to apply the new locale
+    } else {
+      console.error('Invalid event target or locale value.');
+    }
+  }
+
   today: Date = new Date();
 
   // Example amount for currency display
